@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Happy birthdtay</title>  <br>
+<link href="syles.css" rel="stylesheet"> 
+
+<style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#9485f4, #7fff62);
+    animation: changeBg 6s linear infinite;
+}
+@keyframes changeBg {
+    0% {
+        backdrop-filter: hue-rotate(0deg);
+    }
+    100% {
+        backdrop-filter: hue-rotate(360deg);
+    }
+}
+.message {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 2em;
+    z-index: 3;
+    opacity: 0.75;
+    transform: translateY(-200px);  
+}
+span {
+    margin: 0.2em;
+    user-select: none;
+}
+.cube {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    background: var(--clr);
+}
+.cake {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    animation: upDown 4s ease-in-out infinite;
+}
+@keyframes upDown {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+.layer {
+    width: 300px;
+    height: 75px;
+    position: relative;
+    background: #fe864a;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    overflow: hidden;
+    transform: translateY(87px);
+}
+.layer::before {
+    content: '';
+    position: absolute;
+    background: #eee27c;
+    width: 100%;
+    height: 5px;
+    transform: translateY(50px);
+}
+.layer::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(rgb(252, 163, 163), transparent);
+    border-radius: 20px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    background-size: 20%;
+}
+.cream {
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    border-radius: 30px;
+    background: #e6fe4a;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    transform: translateX(calc(60px * var(--i)));
+    animation: move 4s ease-in-out infinite;
+}
+@keyframes move {
+    0%, 100% {
+        transform: translateX(calc(60px * var(--i)));
+    }
+    50% {
+        transform: translateX(calc(40px * var(--i)));
+    }
+}
+div .layer:nth-child(1) {
+    width: 200px;
+    filter: hue-rotate(260deg);
+}
+div .layer:nth-child(2) {
+    width: 250px;
+    filter: hue-rotate(324deg);
+}
+.candle {
+    width: 8px;
+    height: 40px;
+    background: #f57647;
+    position: absolute;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transform: translateY(-45px);
+}
+.candle::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #fe4a4a;
+    border-radius: 50%;
+    border-top-right-radius: 0;
+    transform: rotate(-45deg) translate(9px, -12px);
+}
+.name {
+    font-family: 'Caveat', cursive;
+    font-size: 2em;
+    font-weight: 600;
+    color: #0026e4;
+    text-align: center;
+    text-transform: capitalize;
+    position: absolute;
+    z-index: 1000000000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.plate {
+    width: 400px;
+    height: 60px;
+    background: #d7d7d7;
+    position: absolute;
+    border-radius: 50%;
+    transform: translateY(210px);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.plate::before {
+    content: '';
+    position: absolute;
+    width: 65%;
+    height: 65%;
+    border-radius: 50%;
+    background: #e4e4e4;
+    box-shadow: inset 10px 10px 10px #bbbbbb;
+    z-index: 4;
+}
+.plate::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    border-radius: 33%;
+    background: #d7d7d7;
+    transform: translateY(20px);
+    z-index: 3;
+}</style>
+
+</head>
+<div class="message">
+            <span class="cube" style="--clr:#f54747;">H</span>
+            <span class="cube" style="--clr:#fe864a;">A</span>
+            <span class="cube" style="--clr:#feef66;">P</span>
+            <span class="cube" style="--clr:#7fff62;">P</span>
+            <span class="cube" style="--clr:#8fffd4;">Y</span>
+        </div>
+        
+        <div class="message">
+            <span class="cube" style="--clr:#4a74fe;">B</span>
+            <span class="cube" style="--clr:#984afe;">I</span>
+            <span class="cube" style="--clr:#fe4ae6;">R</span>
+            <span class="cube" style="--clr:#fe4a98;">T</span>
+            <span class="cube" style="--clr:#fe7d4a;">H</span>
+            <span class="cube" style="--clr:#feef66;">D</span>
+            <span class="cube" style="--clr:#7fff62;">A</span>
+            <span class="cube" style="--clr:#8fffd4;">Y</span>
+        </div>
+
+        <div class="message">
+            <span class="cube" style="--clr:#66739d;">S</span>
+            <span class="cube" style="--clr:#945cdf;">H</span>
+            <span class="cube" style="--clr:#fe4ae6;">A</span>
+            <span class="cube" style="--clr:#f288b6;">S</span>
+            <span class="cube" style="--clr:#1ad7ec;">H</span>
+            <span class="cube" style="--clr:#f383d9;">W</span>
+            <span class="cube" style="--clr:#b1dc6b;">A</span>
+            <span class="cube" style="--clr:#0ced97a7;">T</span>
+        </div><BR><BR>
+
+        <div class="cake">
+            <div class="layer">
+                <div class="cream" style="--i:0;"></div>
+                <div class="cream" style="--i:1;"></div>
+                <div class="cream" style="--i:2;"></div>
+                <div class="cream" style="--i:3;"></div>
+                <div class="cream" style="--i:4;"></div>
+            </div>
+            <div class="layer">
+                
+                <div class="cream" style="--i:0;"></div>
+                <div class="cream" style="--i:1;"></div>
+                <div class="cream" style="--i:2;"></div>
+                <div class="cream" style="--i:3;"></div>
+                <div class="cream" style="--i:4;"></div>
+                <div class="cream" style="--i:5;"></div>
+            </div>
+            <div class="layer">
+                <div class="cream" style="--i:0;"></div>
+                <div class="cream" style="--i:1;"></div>
+                <div class="cream" style="--i:2;"></div>
+                <div class="cream" style="--i:3;"></div>
+                <div class="cream" style="--i:4;"></div>
+                <div class="cream" style="--i:5;"></div>
+                <div class="cream" style="--i:6;"></div>
+            </div>
+            <div class="candle"></div>
+        </div>
+        <div class="plate"></div>
+
+
+       
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script>
+            anime.timeline({
+                loop: true
+            })
+            .add ({
+                targets: '.message .cube',
+                scale: [2, 1],
+                opacity: [0, 1],
+                easing: 'easeOutExpo',
+                duration: 950,
+                delay: (el, i) => 70*i
+            })
+            .add ({
+                targets: '.message .cube',
+                scale: [1, 0],
+                opacity: 0,
+                duration: 950,
+                easing: 'easeInQuad',
+                delay: (el, i) => 70*i
+            })
+
+        </script>
+
+<style>
+
+</stlye>
+
+    </body>
+    </html>
